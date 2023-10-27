@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const api = require('./routes/index');
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -26,6 +26,6 @@ app.get('*', (req, res) =>
     res.sendFile(path.join(__dirname, 'public/index.html'))
 );
 
-app.listen(PORT, () =>
+app.listen(PORT, "0.0.0.0", () =>
     console.log(`Listening at http://localhost${PORT}`)
 );
