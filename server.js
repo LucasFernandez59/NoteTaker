@@ -27,5 +27,5 @@ app.get('*', (req, res) =>
 );
 
 app.listen(PORT, () =>
-    console.log('Listening at http://localhost:3001')
+    console.log(`Listening at http://localhost${PORT}`)
 );
